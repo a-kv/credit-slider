@@ -1,0 +1,131 @@
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Suisse', Arial, sans-serif;
+    background-color: #fafafa;
+    color: #d4d4d4;
+    height: 100vh;
+    max-width: 100%;
+
+}
+
+.range-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.range-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto 30px;
+}
+
+.title {
+    color: #302a42;
+    font-size: 16px;
+    font-family: 'Suisse', Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 54px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.slider-value {
+    display: flex;
+    font-size: 20px;
+    height: 63px;
+    border: #d4d4d4 1px solid;
+    border-bottom: white 1px solid;
+    align-items: center;
+    padding-left: 30px;
+    font-family: 'Suisse', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    color: #302a42;
+    opacity: 0.5;
+}
+
+.text {
+    margin-left: 5px;
+}
+
+/*for Chrome*/
+.current-slider-value {
+    -webkit-appearance: none;
+    margin: 0;
+    background: #d4d4d4;
+    background: linear-gradient(90deg, #d4d4d4 50%, #d4d4d4 50%);
+    width: 360px;
+    height: 5px;
+    -webkit-transition: 0.3s;
+    z-index: 0;
+
+}
+
+.current-slider-value:focus {
+    outline: none;
+}
+
+.current-slider-value::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    z-index: 3;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid #b49263;
+    position: relative;
+}
+
+/*for mozilla*/
+.current-slider-value::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    z-index: 4;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid #b49263;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #302a42;
+    opacity: 0.5;
+    letter-spacing: 1.25px;
+
+}
+
+.sum {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Suisse', Arial, sans-serif;
+    font-size: 48px;
+    color: #302a42;
+    font-weight: bold;
+    justify-content: center;
+    width: 280px;
+}
+
+
+@media screen and (max-width: 370px) {
+    .current-slider-value, .slider {
+        width: 280px;
+    }
+}
